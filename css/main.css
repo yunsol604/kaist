@@ -466,7 +466,6 @@ main {}
    display: flex;gap: 10px;justify-content: center;align-items: center;
    /* position: absolute;bottom: 30%;left: 0;right: 0;z-index: 1; */
 }
-
 .main_visual .swiper-pagination {
    position: static;width: auto;
 }

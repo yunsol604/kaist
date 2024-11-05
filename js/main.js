@@ -254,3 +254,25 @@ $('.main_nav a').click(function() {
 
    // alert($('section').eq(1).attr('class'))
 })
+
+//*** 섹션마다 스크롤 시 fade 효과
+$('.fade_wrap').css({
+   opacity: 0,
+   transform: 'translateY(30px)',
+   transition: 'opacity 0.6s ease, transform 0.6s ease'
+});
+$(window).on('scroll', function() {
+   $('.fade_wrap').each(function() {
+      let windowHeight = $(window).height();
+      let scrollTop = $(window).scrollTop();
+      let offsetTop = $(this).offset().top;
+
+      //화면의 30% 지점에서 보이도록
+      if (scrollTop + windowHeight * 0.7 > offsetTop) {
+         $(this).css({
+            opacity: 1,
+            transform: 'translateY(0)' //원래 위치로 이동
+         });
+      }
+   });
+});
