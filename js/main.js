@@ -117,7 +117,7 @@ const mainSwiper = new Swiper ('.main_swiper', {
    effect: 'fade',
    loop: true,
    autoplay: {
-      delay: 2000,
+      delay: 5000,
    },
    pagination: {
       el: '.swiper-pagination',

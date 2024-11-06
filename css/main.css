@@ -452,6 +452,10 @@ main {}
    0% {transform: translateY(-40%);opacity: 0;}
    100% {transform: translateY(-50%);opacity: 1;}
 }
+@keyframes swiperControls {
+   0% {transform: translateY(30%);opacity: 0;}
+   100% {transform: translateY(0);opacity: 1;}
+}
 
 .main_visual .swiper_content .progress_wrap {position: relative;}
 .main_visual .swiper_content .progress_wrap .swiper-btn-prev {
@@ -470,7 +474,7 @@ main {}
 .main_visual .progress_wrap .progress .bar {
    height: 100%;width: 220px;
    background: #FFF;
-   animation: bar 2s linear infinite;
+   animation: bar 5s linear infinite;
 }
 @keyframes bar {
    0% {margin-left: -200px;}
@@ -496,7 +500,7 @@ main {}
    /* position: absolute;bottom: 30%;left: 0;right: 0;z-index: 1; */
 }
 .main_visual .swiper_content span, .swiper-controls-wrap {
-   animation: swiperContent 5s forwards;
+   animation: swiperControls 5s forwards;
 }
 .main_visual .swiper-pagination {
    position: static;width: auto;
