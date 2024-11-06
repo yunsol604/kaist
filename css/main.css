@@ -470,7 +470,7 @@ main {}
 .main_visual .progress_wrap .progress .bar {
    height: 100%;width: 220px;
    background: #FFF;
-   animation: bar 5s linear infinite;
+   animation: bar 2s linear infinite;
 }
 @keyframes bar {
    0% {margin-left: -200px;}

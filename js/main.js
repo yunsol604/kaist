@@ -133,22 +133,23 @@ const mainSwiper = new Swiper ('.main_swiper', {
    //       console.log('dd');
    //    }
    // },
-   on: {
-      slideChangeTransitionStart: function () {
-         resetProgressBar();
-      },
-   },
+   // on: {
+   //    slideChangeTransitionStart: function () {
+   //       resetProgressBar();
+   //    },
+   // },
 })
 // mainSwiper.on('slideChange', function () {
 //    // $('.progress .bar').animate({marginLeft: '100%'}, 2000, function() {
 //    //    $(this).css({marginLeft: '-200px'})
 //    // })
 // });
+const $progressBar = $('.progress .bar');
 function startProgressBar() {
-   $('.progress .bar').css('animation-play-state', 'running');
+   $progressBar.css('animation-play-state', 'running');
 }
 function stopProgressBar() {
-   $('.progress .bar').css('animation-play-state', 'paused');
+   $progressBar.css('animation-play-state', 'paused');
 }
 $('.main_swiper .auto-play').click(function() {
    $(this).hide()
@@ -162,6 +163,18 @@ $('.main_swiper .auto-stop').click(function() {
    mainSwiper.autoplay.stop();
    stopProgressBar();
 })
+
+//.progress .bar 초기화
+function resetProgressBar() {
+   $progressBar.css('animation', 'none');
+   void $progressBar[0].offsetWidth;
+   $progressBar.css('animation', '')
+   $progressBar.css('animation-play-state', 'running');
+}
+
+$('.swiper-button-next').on('click', resetProgressBar);
+$('.swiper-button-prev').on('click', resetProgressBar);
+
 
 // $('.progress .bar').animate({marginLeft: '100%'}, 2000)
 
