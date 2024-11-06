@@ -127,17 +127,43 @@ const mainSwiper = new Swiper ('.main_swiper', {
       nextEl: '.swiper-btn-next',
       prevEl: '.swiper-btn-prev',
    },
+   // on: {
+   //    slideChange: function(){ // 슬라이드 실행 직전에 작동
+   //       $('.progress .bar').animate({marginLeft: '100%'}, 2000) // 실행문
+   //       console.log('dd');
+   //    }
+   // },
+   on: {
+      slideChangeTransitionStart: function () {
+         resetProgressBar();
+      },
+   },
 })
+// mainSwiper.on('slideChange', function () {
+//    // $('.progress .bar').animate({marginLeft: '100%'}, 2000, function() {
+//    //    $(this).css({marginLeft: '-200px'})
+//    // })
+// });
+function startProgressBar() {
+   $('.progress .bar').css('animation-play-state', 'running');
+}
+function stopProgressBar() {
+   $('.progress .bar').css('animation-play-state', 'paused');
+}
 $('.main_swiper .auto-play').click(function() {
    $(this).hide()
    $('.main_swiper .auto-stop').show();
-      mainSwiper.autoplay.start();
+   mainSwiper.autoplay.start();
+   startProgressBar();
 })
 $('.main_swiper .auto-stop').click(function() {
    $(this).hide()
    $('.main_swiper .auto-play').show();
-      mainSwiper.autoplay.stop();
+   mainSwiper.autoplay.stop();
+   stopProgressBar();
 })
+
+// $('.progress .bar').animate({marginLeft: '100%'}, 2000)
 
 //faculty
 const facultySwiper = new Swiper ('.faculty_swiper',{

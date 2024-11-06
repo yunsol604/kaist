@@ -7,6 +7,7 @@
 ::selection {
    background: var(--main-color);color: #FFF;
 }
+html, body {overflow-x: hidden;}
 body {
    font-family: 'Montserrat','SUIT',sans-serif;
    font-size: 16px;
@@ -444,7 +445,14 @@ main {}
 }
 .main_visual .swiper_content strong {
    font-size: 56px;line-height: 1.2em;font-weight: 900;
+   animation: swiperContent 2s forwards;
 }
+
+@keyframes swiperContent {
+   0% {transform: translateY(-40%);opacity: 0;}
+   100% {transform: translateY(-50%);opacity: 1;}
+}
+
 .main_visual .swiper_content .progress_wrap {position: relative;}
 .main_visual .swiper_content .progress_wrap .swiper-btn-prev {
    width: auto;height: auto;cursor: pointer;
@@ -459,12 +467,36 @@ main {}
    height: 1px;
    background: rgba(255, 255, 255, 0.2);
 }
+.main_visual .progress_wrap .progress .bar {
+   height: 100%;width: 220px;
+   background: #FFF;
+   animation: bar 5s linear infinite;
+}
+@keyframes bar {
+   0% {margin-left: -200px;}
+   100% {margin-left: 100%;}
+}
+/* .main_visual .progress_wrap .progress .bar {
+   width: 0;
+   height: 100%;
+   background: #FFF;
+   animation: progress-animation 2s linear infinite;
+}
+
+@keyframes progress-animation {
+   0% { width: 0; }
+   100% { width: 100%; }
+} */
+
 .main_visual .swiper_content span {
    font-size: 24px;line-height: 1.25em;font-weight: 500;
 }
 .main_visual .swiper-controls-wrap {
    display: flex;gap: 10px;justify-content: center;align-items: center;
    /* position: absolute;bottom: 30%;left: 0;right: 0;z-index: 1; */
+}
+.main_visual .swiper_content span, .swiper-controls-wrap {
+   animation: swiperContent 5s forwards;
 }
 .main_visual .swiper-pagination {
    position: static;width: auto;
