@@ -18,18 +18,13 @@
    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"
       integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script defer src="./js/main.js">
-      // js를 internal(내부 문서) 방식으로 사용할 때는 script 태그에 속성없이 바로 작성
-      // external (외부 문서) 방식으로 사용할 때는 script 태그에 src 속성을 이용하고 태그 내부에는 아무것도 작성하지 않음
-
-      // *** script 태그 하나에 src 속성과 태그 내부에 js 문법을 둘 다 사용하면 둘 다 동작하지 않음
-   </script>
+   <script defer src="./js/main.js"></script>
 </head>
 <body class="home">
    <div class="skip_nav">
       <a href="#main_content">본문 바로가기</a>
    </div>
-   <!-- <div id="popup">
+   <div id="popup">
       <img src="./img/main/popup.jpg" alt="2025학년도 봄학기 녹색성장지속가능대학원 신입생 모집 입시 설명회 - 일시: 2024.06.22(토) 11시부터, KAIST 도곡캠퍼스 400호, 문의: 042-350-4162, ...">
       <div class="popup_footer">
          <input type="checkbox" id="today_close">
@@ -38,7 +33,7 @@
             <i class="ri-close-fill"></i>
          </button>
       </div>
-   </div> -->
+   </div>
 <div id="wrap">
    <header>
       <div class="inner">
@@ -303,23 +298,23 @@
                   <img src="./img/main/main_slide04.jpg" alt="">
                </div>
             </div>
-            <div class="swiper_content">
-               <strong>KAIST GRADUATE SCHOOL OF <br> GREEN GROWTH & SUSTAINABILITY</strong>
-               <div class="progress_wrap">
-                  <!-- navigation button -->
-                  <div class="swiper-btn-prev"><img src="./img/main/main_arrow.svg" alt=""></div>
-                  <div class="swiper-btn-next"><img src="./img/main/main_arrow.svg" alt=""></div>
-                  <div class="progress">
-                     <div class="bar"></div>
-                  </div>
+         </div>
+         <div class="swiper_content">
+            <strong>KAIST GRADUATE SCHOOL OF <br> GREEN GROWTH & SUSTAINABILITY</strong>
+            <div class="progress_wrap">
+               <!-- navigation button -->
+               <div class="swiper-btn-prev"><img src="./img/main/main_arrow.svg" alt=""></div>
+               <div class="swiper-btn-next"><img src="./img/main/main_arrow.svg" alt=""></div>
+               <div class="progress">
+                  <div class="bar"></div>
                </div>
-               <span>Combining Science & Technology <br> with Policy and Finance to Achieve Carbon Neutrality</span>
-               <div class="swiper-controls-wrap">
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-auto-controls">
-                     <button class="auto-play"><i class="ri-play-circle-fill"></i></button>
-                     <button class="auto-stop"><i class="ri-pause-circle-fill"></i></button>
-                  </div>
+            </div>
+            <span>Combining Science & Technology <br> with Policy and Finance to Achieve Carbon Neutrality</span>
+            <div class="swiper-controls-wrap">
+               <div class="swiper-pagination"></div>
+               <div class="swiper-auto-controls">
+                  <button class="auto-play"><i class="ri-play-circle-fill"></i></button>
+                  <button class="auto-stop"><i class="ri-pause-circle-fill"></i></button>
                </div>
             </div>
          </div>
@@ -355,7 +350,6 @@
             </a>
          </div>
       </div>
-      <!-- 퀵메뉴가 메인비주얼과 겹쳐져 있기 때문에 독립적인 행으로 만들지 고민이 필요 -->
       <h2 class="blind">메인 본문</h2>
       <section class="earth_wrap fade_wrap">
          <div class="inner">
@@ -793,7 +787,6 @@
                <a href="#">개인정보처리방침</a>
             </div>
             <div class="f_link">
-               <!-- .family_wrap>button+ul>li*7>a[href="#" target="_blank"]{family} -->
                <div class="family_wrap">
                   <button>FAMILY SITES <i class="ri-add-fill"></i></button>
                   <ul>
